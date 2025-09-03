@@ -1,21 +1,21 @@
 [
   {
     "name": "Olive Garden",
-    "address": "Olive Garden",
+    "address": "Olive Garden address",
     "cuisine": "Italian",
     "website": "https://olivegarden.com",
     "description": "A nice restaurant"
   },
   {
     "name": "Sushi Bar",
-    "address": "Sushi Bar",
+    "address": "Sushi Bar address",
     "cuisine": "Japanese",
     "website": "https://sushibar.com",
     "description": "A nice sushi bar"
   },
   {
     "name": "Pizza Napoli",
-    "address": "Pizza Napoli",
+    "address": "Pizza Napoli address",
     "cuisine": "Italian",
     "website": "https://pizzanapoli.com",
     "description": "A nice pizza place"
