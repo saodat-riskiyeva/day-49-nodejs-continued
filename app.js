@@ -1,36 +1,34 @@
-const fs = require("fs");
-const path = require("path");
-const express = require("express");
+const fs = require("fs"); // import the file system module
 
-const app = express();
+const path = require("path"); // import the path module
+const express = require("express"); // import the express module
 
-app.use(express.static("public"));
+const app = express(); // create an Express application
 
-app.use(express.urlencoded({ extended: false }));
+app.set("views", path.join(__dirname, "views")); // set the views directory
+app.set("view engine", "ejs"); // set EJS as the templating engine
+
+app.use(express.static("public")); // to serve static files
+app.use(express.urlencoded({ extended: false })); // to parse form data
 
 app.get("/", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "index.html");
-  res.sendFile(htmlFilePath);
+  res.render("index");
 });
 
 app.get("/about", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "about.html");
-  res.sendFile(htmlFilePath);
+  res.render("about");
 });
 
 app.get("/confirm", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "confirm.html");
-  res.sendFile(htmlFilePath);
+  res.render("confirm");
 });
 
 app.get("/recommend", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "recommend.html");
-  res.sendFile(htmlFilePath);
+  res.render("recommend");
 });
 
 app.get("/restaurants", function (req, res) {
-  const htmlFilePath = path.join(__dirname, "views", "restaurants.html");
-  res.sendFile(htmlFilePath);
+  res.render("restaurants");
 });
 
 app.post("/recommend", function (req, res) {
