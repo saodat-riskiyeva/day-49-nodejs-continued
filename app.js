@@ -48,7 +48,8 @@ app.get("/restaurants/:id", function (req, res) {
       return res.render("restaurant-detail", { restaurant: restaurant });
     }
   }
-  res.render("restaurant-detail", { rid: restaurantId });
+
+  res.render("404");
 });
 
 app.get("/recommend", function (req, res) {
