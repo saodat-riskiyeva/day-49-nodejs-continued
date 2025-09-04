@@ -1,7 +1,8 @@
 const fs = require("fs"); // import the file system module
-
 const path = require("path"); // import the path module
+
 const express = require("express"); // import the express module
+const uuid = require("uuid"); // import the uuid module for generating unique IDs
 
 const app = express(); // create an Express application
 
@@ -46,6 +47,8 @@ app.get("/recommend", function (req, res) {
 
 app.post("/recommend", function (req, res) {
   const restaurant = req.body;
+  restaurant.id = uuid.v4();
+
   const filePath = path.join(__dirname, "data", "restaurants.json");
   const fileData = fs.readFileSync(filePath);
 
