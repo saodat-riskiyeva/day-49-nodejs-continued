@@ -1,5 +1,6 @@
 [
   {
+    "id": "a2cc652f-5936-14c2-961f-4eebf704dc68",
     "name": "Olive Garden",
     "address": "Olive Garden address",
     "cuisine": "Italian",
@@ -7,6 +8,7 @@
     "description": "A nice restaurant"
   },
   {
+    "id": "c14b652f-1641-49c2-561f-4eebf704dc02",
     "name": "Sushi Bar",
     "address": "Sushi Bar address",
     "cuisine": "Japanese",
@@ -14,10 +16,19 @@
     "description": "A nice sushi bar"
   },
   {
+    "id": "g548652f-3684-49c2-961f-4eebf704dchg",
     "name": "Pizza Napoli",
     "address": "Pizza Napoli address",
     "cuisine": "Italian",
     "website": "https://pizzanapoli.com",
     "description": "A nice pizza place"
+  },
+  {
+    "name": "Munich Fines Restaurant",
+    "address": "Munich Address",
+    "cuisine": "German cousine",
+    "website": "https://munichfinesrestaurant.com",
+    "description": "It's very tasty",
+    "id": "b1bb652f-6346-49c2-961f-4eebf704dc37"
   }
 ]
