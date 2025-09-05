@@ -59,13 +59,12 @@ app.get("/recommend", function (req, res) {
 app.post("/recommend", function (req, res) {
   const restaurant = req.body;
   restaurant.id = uuid.v4();
+  const restaurants = getStoredRestaurants();
 
-  const filePath = path.join(__dirname, "data", "restaurants.json");
-  const fileData = fs.readFileSync(filePath);
+  restaurants.push(restaurant);
 
-  const storedRestaurants = JSON.parse(fileData);
-  storedRestaurants.push(restaurant);
-  fs.writeFileSync(filePath, JSON.stringify(storedRestaurants));
+  storeRestaurants(restaurants);
+
   res.redirect("/confirm");
 });
 
