@@ -1,27 +1,27 @@
 [
   {
-    "id": "a2cc652f-5936-14c2-961f-4eebf704dc68",
     "name": "Olive Garden",
     "address": "Olive Garden address",
     "cuisine": "Italian",
     "website": "https://olivegarden.com",
-    "description": "A nice restaurant"
+    "description": "A nice restaurant",
+    "id": "a2cc652f-59f6-14c2-961f-4eebf704dc68"
   },
   {
-    "id": "c14b652f-1641-49c2-561f-4eebf704dc02",
     "name": "Sushi Bar",
     "address": "Sushi Bar address",
     "cuisine": "Japanese",
     "website": "https://sushibar.com",
-    "description": "A nice sushi bar"
+    "description": "A nice sushi bar",
+    "id": "c14b652f-1j41-49c2-561f-4eebf704dc02"
   },
   {
-    "id": "g548652f-3684-49c2-961f-4eebf704dchg",
     "name": "Pizza Napoli",
     "address": "Pizza Napoli address",
     "cuisine": "Italian",
     "website": "https://pizzanapoli.com",
-    "description": "A nice pizza place"
+    "description": "A nice pizza place",
+    "id": "g548652f-s684-49c2-961f-4eebf704dchg"
   },
   {
     "name": "Munich Fines Restaurant",
@@ -30,5 +30,13 @@
     "website": "https://munichfinesrestaurant.com",
     "description": "It's very tasty",
     "id": "b1bb652f-6346-49c2-961f-4eebf704dc37"
+  },
+  {
+    "name": "The French Bakery",
+    "address": "Windermere",
+    "cuisine": "French",
+    "website": "https://the frenchbakery.com",
+    "description": "Awesome breakfasts in French style",
+    "id": "f02ab5b6-120b-4f66-9720-ec72c420dff3"
   }
 ]
