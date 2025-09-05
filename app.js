@@ -69,4 +69,8 @@ app.post("/recommend", function (req, res) {
   res.redirect("/confirm");
 });
 
+app.use(function (req, res) {
+  res.render("404");
+});
+
 app.listen(3000);
