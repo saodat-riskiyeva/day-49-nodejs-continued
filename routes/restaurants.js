@@ -8,6 +8,13 @@ const router = express.Router();
 router.get("/restaurants", function (req, res) {
   const storedRestaurants = resData.getStoredRestaurants();
 
+  storedRestaurants.sort(function (a, b) {
+    if (a.name > b.name) {
+      return 1;
+    }
+    return -1;
+  });
+
   res.render("restaurants", {
     numberOfRestaurants: storedRestaurants.length,
     restaurants: storedRestaurants,
