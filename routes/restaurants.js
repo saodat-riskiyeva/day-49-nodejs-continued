@@ -1,4 +1,3 @@
-
 import express from "express"; // import the express module
 import { v4 as uuidv4 } from "uuid"; // import the uuid module for generating unique IDs
 import * as resData from "../util/restaurant-data.js"; // import custom module for restaurant data handling
@@ -6,10 +5,24 @@ import * as resData from "../util/restaurant-data.js"; // import custom module f
 const router = express.Router();
 
 router.get("/restaurants", function (req, res) {
+  let order = req.query.order;
+  let nextOrder = "desc";
+
+  if (order !== "asc" && order !== "desc") {
+    order = "asc";
+  }
+
+  if (order === "desc") {
+    nextOrder = "asc";
+  }
+
   const storedRestaurants = resData.getStoredRestaurants();
 
   storedRestaurants.sort(function (a, b) {
-    if (a.name > b.name) {
+    if (
+      (order === "asc" && a.name > b.name) ||
+      (order === "desc" && b.name > a.name)
+    ) {
       return 1;
     }
     return -1;
@@ -18,6 +31,7 @@ router.get("/restaurants", function (req, res) {
   res.render("restaurants", {
     numberOfRestaurants: storedRestaurants.length,
     restaurants: storedRestaurants,
+    nextOrder: nextOrder,
   });
 });
 
