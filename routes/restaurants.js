@@ -1,7 +1,7 @@
-const express = require("express"); // import the express module
-const uuid = require("uuid"); // import the uuid module for generating unique IDs
 
-const resData = require("../util/restaurant-data"); // import custom module for restaurant data handling
+import express from "express"; // import the express module
+import { v4 as uuidv4 } from "uuid"; // import the uuid module for generating unique IDs
+import * as resData from "../util/restaurant-data.js"; // import custom module for restaurant data handling
 
 const router = express.Router();
 
@@ -37,7 +37,7 @@ router.get("/recommend", function (req, res) {
 
 router.post("/recommend", function (req, res) {
   const restaurant = req.body;
-  restaurant.id = uuid.v4();
+  restaurant.id = uuidv4();
   const restaurants = resData.getStoredRestaurants();
 
   restaurants.push(restaurant);
@@ -47,4 +47,4 @@ router.post("/recommend", function (req, res) {
   res.redirect("/confirm");
 });
 
-module.exports = router;
+export default router;
