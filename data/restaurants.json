@@ -30,29 +30,5 @@
     "website": "https://munichfinesrestaurant.com",
     "description": "It's very tasty",
     "id": "b1bb652f-6346-49c2-961f-4eebf704dc37"
-  },
-  {
-    "name": "The French Bakery",
-    "address": "Windermere",
-    "cuisine": "French",
-    "website": "https://thefrenchbakery.com",
-    "description": "Awesome breakfasts in French style",
-    "id": "f02ab5b6-120b-4f66-9720-ec72c420dff3"
-  },
-  {
-    "name": "Bon!",
-    "address": "Altamonte Springs",
-    "cuisine": "European",
-    "website": "https://bon.com",
-    "description": "Coffee and cakes",
-    "id": "fgreqwd5-56df-d45s-ght3-fr4578s3fgtl"
-  },
-  {
-    "name": "Paul",
-    "address": "Winter Garden",
-    "cuisine": "Italian",
-    "website": "https://paul.com",
-    "description": "Awesome breakfasts in Italian style",
-    "id": "a55fh5j4-56gh-5768-fghj-fghyc420ghrk"
   }
 ]
